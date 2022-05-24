@@ -14,65 +14,10 @@ code {
 
 
 body {
-  margin: 0;
   background-color: #fff;
   color: black;
   fill: #fff;
   font-family: Arial;
-}
-
-body > *{
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-table {
-  text-align: center;
-}
-
-/*td {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    margin-bottom: 2.5vw;*/
-/*}*/
-
-.entry-header-contact-text {
-  font-size: 1.3em;
-  margin-top: 0.3em;
-}
-
-.entry-header-contact-text > * {
-  margin-bottom: 5px;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-  width: 100%
-}
-
-.center-container {
-  display: flex;
-  justify-content: center;
-}
-
-.human-image {
-  float: left;
-  height: 100%;
-  min-height: 100px;
-}
-
-.entry-container {
-  display: block;
-  width: 50vw;
-}
-
-.main-name {
-  margin: 15px 0 0 0;
-  color: darkblue;
 }
 
 .entry-header-container {
@@ -80,49 +25,36 @@ table {
   border-width: 1px;
   border-color: #a1a1ff;
   border-radius: 0.4em;
-  width: 100%;
+  width: 500px;
   height: 10em;
   padding: 0;
-  position: relative;
   min-height: 100px;
   min-width: 355px;
 }
 
-.expand-button {
-  width: 20px;
-  height: 20px;
-  float: right;
-  bottom: 0;
-  right: 0;
-  margin-bottom: 8px;
-  margin-right: 10px;
-  position: absolute;
-  transition: all 1s ease;
-  /*transform: rotate(270deg);*/
+.entry-header-contact-text {
+  font-size: 1em;
+  margin-top: 0.3em;
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
 }
 
-.expand-button:focus {
-  transform: rotate(-90deg);
+
+.human-image {
+  float: left;
+  height: 100%;
+  min-height: 100px;
 }
 
-.entry-detail-container {
-  display: block;
-  height: 0;
-  overflow: hidden;
-  margin-top: 10px;
-  transition: height 2s;
-}
-
-.entry-detail-text {
-  font-size: 1.3eM;
-  /*overflow-y: hidden;*/
-  /*height: 0;*/
-  padding: 0px 10px 0px 10px;
+.main-name {
+  margin: 15px 0 0 0;
+  color: darkblue;
 }
 
 .contact-header-text {
   float: left;
-  display: inline-block;
+  /*display: inline-block;*/
   top: 50%;
   bottom: 50%;
   margin-left: 15px;
@@ -133,55 +65,14 @@ table {
   height: 100%;
 }
 
-.with-left-background {
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: contain;
-}
-
-#entry-caption {
-  margin: 15px auto 10px auto;
-  font-size: 5em;
-  color: #6e6e6e;
-  text-align: center;
-  bottom: 0;
-}
-
-#content-container {
-  margin-top: 25px;
+.gridContainer {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(3,1fr);
+  grid-row-gap: 5%;
+  grid-column-gap: 5%;
 }
 
-#entry-list {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  /*border-spacing: 10px;*/
-}
-
-#header {
-  /*background-image: url("logo.jpg");*/
-  position: sticky;
-  border-style: solid;
-  border-bottom-width: 2px;
-  border-right: 0;
-  border-left: 0;
-  border-top: 0;
-  border-color: #a1a1ff;
-  display: block;
-  height: 6em;
-  min-height: 100px;
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#logo-container {
-  height: 75%;
-
-  position: relative;
-  display: block;
-  outline: aliceblue;
-  outline-width: 1px;
-  font-size: large;
+.singleColumn {
+  grid-template-columns: 1fr;
 }

@@ -5,7 +5,8 @@ export default class List extends React.Component {
     constructor() {
         super();
         this.state = {
-            isLoaded:false
+            isLoaded:false,
+            className: "gridContainer"
         };
     }
 
@@ -16,15 +17,20 @@ export default class List extends React.Component {
             .then((json) => {
                 this.setState({
                     entries: json,
-                    isLoaded: true
+                    isLoaded: true,
+                    className: "gridContainer" + ((json.length < 3) ? " singleColumn" : "")
                 });
             })
     }
 
     render() {
+        return <div id = "entryList" className={this.state.className}>{this.getEntries()}</div>
+    }
+
+    getEntries() {
         if(this.state.isLoaded) {
-            return this.state.entries.map(entry => {
-                return <ListEntry entry={entry}/>
+                      return this.state.entries.map((entry,index) => {
+                return <ListEntry entry={entry} key={index}/>
             })
         }
     }
