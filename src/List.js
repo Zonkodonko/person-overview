@@ -6,7 +6,7 @@ export default class List extends React.Component {
         super();
         this.state = {
             isLoaded:false,
-            className: "gridContainer"
+            className: "overview-grid"
         };
     }
 
@@ -18,13 +18,13 @@ export default class List extends React.Component {
                 this.setState({
                     entries: json,
                     isLoaded: true,
-                    className: "gridContainer" + ((json.length < 3) ? " singleColumn" : "")
+                    // className: "overview-grid" + ((json.length < 3) ? " singleColumn" : "")
                 });
             })
     }
 
     render() {
-        return <div id = "entryList" className={this.state.className}>{this.getEntries()}</div>
+        return <div id = "entryList" className="overview-grid">{this.getEntries()}</div>
     }
 
     getEntries() {

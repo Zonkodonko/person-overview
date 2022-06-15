@@ -1,0 +1,52 @@
+.entry-header-container {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a1a1ff;
+    border-radius: 0.4em;
+    height: 10em;
+    padding: 0;
+    min-height: 100px;
+    min-width: auto;
+    flex-basis: 30%;
+}
+
+.entry-header-contact-text {
+    font-size: 1em;
+    margin-top: 0.3em;
+    display: flex;
+    height: 100%;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.human-image {
+    display: inline-block;
+    height: 100%;
+    min-height: 100px;
+}
+
+.entry-name {
+    margin: 0.3em 0 0 0;
+    color: darkblue;
+}
+
+.entry-header-content {
+    display: inline-block;
+    margin-left: 15px;
+    text-align: left;
+    position: absolute;
+}
+
+.overview-grid {
+    display: flex;
+    height: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    gap: 10px;
+}
+
+.overview-grid > *{
+    min-width: 300px;
+}
+
